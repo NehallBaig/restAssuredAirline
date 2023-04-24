@@ -18,7 +18,8 @@ public class JsonUtils {
             data = objectMapper.readValue(new File(completeJsonFilePath), new TypeReference<>() {
             });
         } catch (Exception e) {
-            System.out.println(e);
+            // if file is not found throw exception
+            e.printStackTrace();
         }
         return data;
 
